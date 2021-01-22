@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写文章</title>
+    <%- include('header', {}); %>
+</head>
+<style>
+    .write {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <!-- 导航栏 -->
+                <ul class="layui-nav">
+                    <li class="layui-nav-item">
+                        <a href="">写文章<span class="layui-badge">9</span></a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">个人中心<span class="layui-badge-dot"></span></a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">修改信息</a></dd>
+                            <dd><a href="javascript:;">安全管理</a></dd>
+                            <dd><a href="javascript:;">退了</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <!-- 导航栏end -->
+                <!-- 写文章 -->
+                <div class="write">
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                          <label class="layui-form-label">输入框</label>
+                          <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                          </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                          <label class="layui-form-label">文本域</label>
+                          <div class="layui-input-block">
+                            <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                          </div>
+                        </div>
+                        <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">发布</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                          </div>
+                        </div>
+                      </form>
+                </div>
+                <!-- 文章end -->
+            </div>
+        </div>
+    </div>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+
+            //…
+        });
+
+    </script>
+</body>
+
+</html>
