@@ -8,36 +8,31 @@
     <%- include('header', {}); %>
 </head>
 <style>
+    body{
+      background-image: url("../img/timg22.jpg");
+      background-size: 100%; 
+      background-repeat:no-repeat;
+    }
     .write {
         margin-top: 10px;
+        opacity: 0.8;
+    }
+    .layui-form-label{
+      color: rgb(102, 102, 102);
     }
 </style>
 
 <body>
+  <!-- 导航栏 -->
+  <%- include('nav', {}); %>   
+  <!-- 导航栏end -->
     <div class="layui-fluid">
         <div class="layui-row">
             <div class="layui-col-md12">
-                <!-- 导航栏 -->
-                <ul class="layui-nav">
-                    <li class="layui-nav-item">
-                        <a href="">写文章<span class="layui-badge">9</span></a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href="">个人中心<span class="layui-badge-dot"></span></a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">修改信息</a></dd>
-                            <dd><a href="javascript:;">安全管理</a></dd>
-                            <dd><a href="javascript:;">退了</a></dd>
-                        </dl>
-                    </li>
-                </ul>
-                <!-- 导航栏end -->
+                
                 <!-- 写文章 -->
                 <div class="write">
-                    <form class="layui-form" action="">
+                    <form class="layui-form layui-form-pane" action="">
                         <div class="layui-form-item">
                           <label class="layui-form-label">输入框</label>
                           <div class="layui-input-block">

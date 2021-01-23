@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <%- include('header', {}); %>
+        <!-- <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="/libs/layui/css/layui.css" /> -->
+        <style>
+            body {
+                background-image: url("../img/timg22.jpg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .headsculpture0 {
+                position: relative;
+                display: inline-block;
+                line-height: 0;
+            }
+
+            .headsculpture {
+                /* width: 100px;
+        height: 100px; */
+                border-radius: 50%;
+                height: 96px;
+                width: 96px;
+                max-width: 100%;
+                margin: 0;
+                padding: 4px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+                transition: .4s;
+            }
+
+            .layui-tables {
+                opacity: 0.8;
+                bottom: 0;
+                min-height: 88%;
+                text-align: center;
+                position: absolute;
+                top: 90px;
+                width: 70%;
+                background-color: #fff;
+            }
+
+            .name {
+                line-height: 30px;
+            }
+
+            .site-author-status {
+                position: absolute;
+                height: 1.8rem;
+                width: 1.8rem;
+                bottom: 0;
+                right: 0;
+                line-height: 1.8rem;
+                border-radius: 50%;
+                box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+                background-color: #fff;
+            }
+
+            .laydiv {
+                width: 70%;
+                margin: 0 auto;
+                /* position: absolute;
+                top: 50px;
+                bottom: 0px; */
+            }
+        </style>
+</head>
+
+<body>
+    <!-- <div class="layui-fluid"> -->
+    <!-- 常规布局（以中型屏幕桌面为例）： -->
+    <!-- <div class="layui-row"> -->
+    <%- include('nav', {}); %>
+        <div class="laydiv">
+            <table class="layui-tables">
+                <colgroup>
+                    <col width="200">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <!-- <tr>
+                <td colspan="2">通过“列间距”的预设类，来设定列之间的间距。且一行中最左的列不会出现左边距，最右的列不会出现右边距。列间距在保证排版美观的同时，还可以进一步保证分列的宽度精细程度。我们结合网页常用的边距，预设了 12 种不同尺寸的边距，分别是：</td>
+              </tr> -->
+                    <tr>
+                        <td>
+                            <p class="headsculpture0">
+                                <img src="../img/88.jpg" class="headsculpture" alt="">
+                                <span class="site-author-status" title="Looking for dawn.">🌑</span>
+                            </p>
+                            <p class="name">清音墨影</p>
+                            <p class="name"><b>清音墨影的小站</b></p>
+                            <p class="name">人生就像是一场修行</p>
+                        </td>
+                        
+                        <td>
+                               <!-- 时间线 -->
+            <ul class="layui-timeline">
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                  <div class="layui-timeline-content layui-text">
+                    <h3 class="layui-timeline-title">8月18日</h3>
+                    <p>
+                      layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
+                      <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                      <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+                    </p>
+                  </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                  <div class="layui-timeline-content layui-text">
+                    <h3 class="layui-timeline-title">8月16日</h3>
+                    <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>
+                    <ul>
+                      <li>《登高》</li>
+                      <li>《茅屋为秋风所破歌》</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                  <div class="layui-timeline-content layui-text">
+                    <h3 class="layui-timeline-title">8月15日</h3>
+                    <p>
+                      中国人民抗日战争胜利72周年
+                      <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
+                      <br>铭记、感恩
+                      <br>所有为中华民族浴血奋战的英雄将士
+                      <br>永垂不朽
+                    </p>
+                  </div>
+                </li>
+                <li class="layui-timeline-item">
+                  <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                  <div class="layui-timeline-content layui-text">
+                    <div class="layui-timeline-title">过去</div>
+                  </div>
+                </li>
+              </ul>
+            <!-- 时间线end -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+</body>
+
+</html>

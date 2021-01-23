@@ -4,36 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章</title>
+    <title>编辑</title>
     <%- include('header', {}); %>
 </head>
 <style>
-    #test1 {
-        float: right;
+    body{
+      background-image: url("../img/timg22.jpg");
+      background-size: 100%; 
+      background-repeat:no-repeat;
+    }
+    .layui-card{
+        opacity: 0.8;
+        margin-top: 20px;
     }
 </style>
 
 <body>
-    <div class="layui-fluid">
-        <div class="layui-row">
+    <!-- <div class="layui-fluid"> -->
+        <!-- <div class="layui-row"> -->
             <div class="layui-col-md12">
                 <!-- 导航栏 -->
-                <ul class="layui-nav">
-                    <li class="layui-nav-item">
-                        <a href="">写文章<span class="layui-badge">9</span></a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href="">个人中心<span class="layui-badge-dot"></span></a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">修改信息</a></dd>
-                            <dd><a href="javascript:;">安全管理</a></dd>
-                            <dd><a href="javascript:;">退了</a></dd>
-                        </dl>
-                    </li>
-                </ul>
+                <%- include('nav', {}); %>               
                 <!-- 导航栏end -->
                 <!-- 文章 -->
                 <div class="layui-card">
@@ -43,14 +34,13 @@
                     <div class="layui-card-body">
                         <b>作者:搜索</b>
                         <b>发布时间:2021-01-22 13:22:03</b>
-                        <p>卡片式面板面板通常用于非白色背景色的主体内<br>
-                        从而映衬出边框投影</p>
+                        <p>离开世界前，一切都是过程</p>
                     </div>
                 </div>
                 <!-- 文章end -->
             </div>
-        </div>
-    </div>
+        <!-- </div> -->
+    <!-- </div> -->
     <script>
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
         layui.use('element', function () {

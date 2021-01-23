@@ -29,6 +29,7 @@
       height: 300px;
       margin: 160px auto;
       padding-top: 60px;
+      opacity: 0.8;
     }
     /* .layui-input, .layui-textarea {
     width: 111%;
@@ -65,12 +66,12 @@
           </div>                    
           <div class="layui-form-item">
             <!-- <div class="layui-input-inline"> -->
-              <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-              <!-- <button type="reset" class="layui-btn layui-btn-primary">重置</button> -->
+              <button class="layui-btn" lay-submit lay-filter="formDemo"> <a href="article"> 登录</a></button>
+              <button type="button" class="layui-btn layui-btn-primary" οnclick="javascript:history.go(-1);">返回</button>
             <!-- </div> -->
           </div>
            <div class=""><!--layui-input-block -->
-            <a href="register.ejs">没有账号，立即注册</a>
+            <a href="register">没有账号，立即注册</a>
           </div>
         </form>
       <!-- </div> -->
