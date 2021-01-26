@@ -9,9 +9,8 @@
 </head>
 <style>
     body{
-      background-image: url("../img/timg22.jpg");
-      background-size: 100%; 
-      background-repeat:no-repeat;
+      background: url("../img/timg22.jpg")  no-repeat center center fixed;
+      background-size: cover; 
     }
     .write {
         margin-top: 10px;
@@ -21,7 +20,7 @@
       color: rgb(102, 102, 102);
     }
 </style>
-
+<script src="../libs/layui/ckeditor5-build-classic/ckeditor.js"></script>
 <body>
   <!-- 导航栏 -->
   <%- include('nav', {}); %>   
@@ -42,7 +41,7 @@
                         <div class="layui-form-item layui-form-text">
                           <label class="layui-form-label">文本域</label>
                           <div class="layui-input-block">
-                            <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                            <textarea id="editor" name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
                           </div>
                         </div>
                         <div class="layui-form-item">
@@ -64,6 +63,19 @@
 
             //…
         });
+
+
+//文本域
+    ClassicEditor
+        .create( document.querySelector( '#editor' ),{
+          ckfinder:{
+            uploadUrl:'/write/upload'
+          }
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+
 
     </script>
 </body>
