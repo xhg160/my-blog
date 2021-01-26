@@ -36,6 +36,16 @@
                             <dd><a href="javascript:;">退了</a></dd>
                         </dl>
                     </li>
+                    <li class="layui-nav-item">
+                     
+                        <% if(name){ %>
+                            <p style="color: white;line-height: 25px;font-size: 30px;">
+                            <%= name %>
+                            </p>
+                         <% } else { %>
+                         <a href="index">注册|登录<span class="layui-badge-dot"></span></a> 
+                        <% } %>
+                    </li>
                 </ul>
                 <!-- 导航栏end -->
               
