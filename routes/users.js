@@ -29,12 +29,12 @@ router.post('/adduser', async function (req, res, next) {
   const schema = Joi.object({
     name: Joi.string().min(2).max(12).required().error(new Error('用户名不符合验证规则'))
   })
-  try {
-    const value = await schema.validateAsync(userinfo);
-  } catch (err) {
-    console.log(err.message);
-    res.render('error', { message: err.message })
-  }
+  // try {
+  //   const value = await schema.validateAsync(userinfo);
+  // } catch (err) {
+  //   console.log(err.message);
+  //   res.render('error', { message: err.message })
+  // }
   //页面表单数据，放入模板
   let useri = new user(userinfo)
   //保存

@@ -3,7 +3,7 @@ let mongoose=require('../mongodb/db')
 //Schema
 let Schema=mongoose.Schema
 let userSchema=new Schema({
-    times:Date,
+    datetime:Number,
     title:String,
     name:String,
     desc:String,

@@ -28,14 +28,16 @@
                 <!-- 文章 -->
                 <div class="layui-card">
                     <div class="layui-card-header">
-                        <h1>卡片面板</h1>
+                        <h1>标题：<input type="text" value="<%= data.title %>"> </h1>
                     </div>
                     <div class="layui-card-body">
-                        <b>作者:搜索</b>
-                        <b>发布时间:2021-01-22 13:22:03</b>
-                        <p>离开世界前，一切都是过程</p>
+                        <b>用户:<%= data.name %></b>
+                        <b>发布时间:<%= data.times %></b>
+                               
+                        <p><%- data.desc %></p><textarea name="" id="" class="layui-textarea" rows="20"><%- data.desc %> </textarea>
                     </div>
                 </div>
+              
                 <!-- 文章end -->
             </div>
         <!-- </div> -->

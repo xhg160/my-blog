@@ -28,20 +28,21 @@
                     <!-- <li class="layui-nav-item">
                         <a href="index">注册|登录<span class="layui-badge-dot"></span></a>
                     </li> -->
-                    <li class="layui-nav-item">
-                        <a href="me"><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">修改信息</a></dd>
-                            <dd><a href="javascript:;">安全管理</a></dd>
-                            <dd><a href="javascript:;">退了</a></dd>
-                        </dl>
-                    </li>
+                   
                     <li class="layui-nav-item">
                      
                         <% if(name){ %>
-                            <p style="font-size: 21px;opacity: 0.8;padding-left: 5px;">
-                            <%= name %>
-                            </p>
+                            <li class="layui-nav-item">
+                                <a href="me"><img src="../img/88.jpg" class="layui-nav-img"><%= name %></a>
+                                <!-- <dl class="layui-nav-child">
+                                    <dd><a href="javascript:;">修改信息</a></dd>
+                                    <dd><a href="javascript:;">安全管理</a></dd>
+                                    <dd><a href="/go/out">退了</a></dd>
+                                </dl> -->
+                           
+                            
+                            
+                             </li>
                          <% } else { %>
                          <a href="index">注册|登录<span class="layui-badge-dot"></span></a> 
                         <% } %>

@@ -19,7 +19,11 @@ app.use(session({
   saveUninitialized:true,//保存初始状态
   cookie:{maxAge:1000*60*60*24}//存储信息在客户端，保存时间
 }))
-
+//退出登录
+// app.get('/go/out',(req,res)=>{
+//   res.clearCookie('cookie');
+//   res.send('退出成功')
+// })
 
 //登录拦截
 app.get('*',(req,res,next)=>{

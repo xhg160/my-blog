@@ -19,6 +19,12 @@
     .layui-form-label{
       color: rgb(102, 102, 102);
     }
+    .ck-content{
+      height: 380px;
+    }
+    .layui-card-body{
+      color: white;
+    }
 </style>
 <script src="../libs/layui/ckeditor5-build-classic/ckeditor.js"></script>
 <body>
@@ -35,19 +41,30 @@
                         <div class="layui-form-item">
                           <label class="layui-form-label">输入框</label>
                           <div class="layui-input-block">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                            <input type="hidden" name="id" value="<%= data._id %>">
+                            <input type="hidden" name="page" value="<%= data.page %>">
+                            <input type="text" name="title" value="<%= data.title %>" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
                           </div>
                         </div>
+                        <%if(data._id){ %>
+                        <div class="layui-card-body">
+                          <b>用户:<%= data.name %></b>
+                          <b>发布时间:<%= data.times %></b>
+                      </div>
+                      <%}%>
                         <div class="layui-form-item layui-form-text">
                           <label class="layui-form-label">文本域</label>
                           <div class="layui-input-block">
-                            <textarea id="editor" name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                            <textarea  rows="20" id="editor" name="desc" placeholder="请输入内容" class="layui-textarea"><%- data.desc %></textarea>
                           </div>
                         </div>
                         <div class="layui-form-item">
                           <div class="layui-input-block">
+                            <%if(!data._id){ %>
                             <button class="layui-btn" lay-submit lay-filter="formDemo">发布</button>
-                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            <%}else{%>
+                            <button type="submit" class="layui-btn layui-btn-primary">确认修改</button>
+                            <%}%>
                           </div>
                         </div>
                       </form>

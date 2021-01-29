@@ -12,23 +12,56 @@ const { format } = require('path');
 router.post('/add',(req,res,next)=>{
     console.log(req.body);
     //向数据库添加信息
-    let times=new Date();
+    let id=req.body.id||'';
     let name=req.session.name;
-  let userinfo = {
-      times:times,
+    if (!id) {
+      var userinfo = {
+    datetime:Date.now(),
       name:name,
     title: req.body.title,
     desc: req.body.desc,
   }
+  
   //页面表单数据，放入模板
   let useri = new write(userinfo)
   //保存
   useri.save((err, result) => {
     if (!err) {
-      res.send(result)
+      // res.send(result)
+      res.redirect('/article')
+    }
+  })
+}else{
+//编辑
+let page=req.body.page;
+//查找数据并修改内容
+//新数据获取
+let writedata={
+  title:req.body.title,
+  desc:req.body.desc
+}
+write.findOneAndUpdate(id,writedata,{new:true},(err,result)=>{
+  if (!err) {
+    res.redirect(`/article?page=${page}`)
+  }
+})
+}})
+
+//删除文件接口
+router.get('/delete',(req,res,next)=>{
+  let id=req.query._id;
+  let page=req.query.page;
+  // console.log(id,page);
+  //从数据库删除一条数据
+  write.deleteOne({_id:id},err=>{
+    if (!err) {
+      // res.send('删除成功')
+      //重定向
+      res.redirect(`/article?page=${page}`)
     }
   })
 })
+
 //文件上传路由
 router.post('/upload',(req,res,next)=>{
   //实例化multiparty的form类
